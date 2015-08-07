@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import br.com.fences.deicdivecarentidade.enderecoavulso.geojson.Point;
+
 public class EnderecoAvulso implements Serializable{
 
 	private static final long serialVersionUID = 6708411077276497587L;
@@ -19,25 +21,13 @@ public class EnderecoAvulso implements Serializable{
 	private String cidade;
 	private String uf;
 
-	private String tipo; //1)mercado 2)galpao 3)deposito 4)desmanche
-	private String googleLatitude;
-	private String googleLongitude; 
-	private String googleGeocoderStatus; 
+	private String tipo; //1)mercado 2)galpao 3)deposito 4)desmanche	
+	private Point  geometry; 
 	private String indicadorAtivo;
 	private String ultimaAtualizacao;
 	
 	
-	@Override
-	public String toString() {
-		return "EnderecoAvulso [id=" + id + ", razaoSocial=" + razaoSocial
-				+ ", logradouro=" + logradouro + ", numero=" + numero
-				+ ", bairro=" + bairro + ", cep=" + cep + ", cidade=" + cidade
-				+ ", uf=" + uf + ", tipo=" + tipo + ", googleLatitude="
-				+ googleLatitude + ", googleLongitude=" + googleLongitude
-				+ ", googleGeocoderStatus=" + googleGeocoderStatus
-				+ ", indicadorAtivo=" + indicadorAtivo + ", ultimaAtualizacao="
-				+ ultimaAtualizacao + "]";
-	}
+
 	public String getId() {
 		return id;
 	}
@@ -92,24 +82,7 @@ public class EnderecoAvulso implements Serializable{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getGoogleLatitude() {
-		return googleLatitude;
-	}
-	public void setGoogleLatitude(String googleLatitude) {
-		this.googleLatitude = googleLatitude;
-	}
-	public String getGoogleLongitude() {
-		return googleLongitude;
-	}
-	public void setGoogleLongitude(String googleLongitude) {
-		this.googleLongitude = googleLongitude;
-	}
-	public String getGoogleGeocoderStatus() {
-		return googleGeocoderStatus;
-	}
-	public void setGoogleGeocoderStatus(String googleGeocoderStatus) {
-		this.googleGeocoderStatus = googleGeocoderStatus;
-	}
+
 	public String getIndicadorAtivo() {
 		return indicadorAtivo;
 	}
@@ -121,6 +94,12 @@ public class EnderecoAvulso implements Serializable{
 	}
 	public void setUltimaAtualizacao(String ultimaAtualizacao) {
 		this.ultimaAtualizacao = ultimaAtualizacao;
+	}
+	public Point getGeometry() {
+		return geometry;
+	}
+	public void setGeometry(Point geometry) {
+		this.geometry = geometry;
 	}
 
 }
