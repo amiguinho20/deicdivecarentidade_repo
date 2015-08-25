@@ -23,6 +23,7 @@ public class EnderecoAvulso implements Serializable{
 
 	private String tipo; //1)mercado 2)galpao 3)deposito 4)desmanche	
 	private Point  geometry; 
+	private String geocoderStatus;
 	private String indicadorAtivo;
 	private String ultimaAtualizacao;
 	
@@ -100,6 +101,12 @@ public class EnderecoAvulso implements Serializable{
 	}
 	public void setGeometry(Point geometry) {
 		this.geometry = geometry;
+	}
+	public String getGeocoderStatus() {
+		return geocoderStatus;
+	}
+	public void setGeocoderStatus(String geocoderStatus) {
+		this.geocoderStatus = geocoderStatus;
 	}
 
 }
