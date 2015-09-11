@@ -21,7 +21,7 @@ public class EnderecoAvulso implements Serializable{
 	private String cidade;
 	private String uf;
 
-	private String tipo; //1)mercado 2)galpao 3)deposito 4)desmanche	
+	private String tipo; //1)mercado 2)galpao 3)deposito 4)desmanche 5)centro de distribuicao	
 	private Point  geometry; 
 	private String geocoderStatus;
 	private String indicadorAtivo;
